@@ -63,7 +63,6 @@ const Landing = () => {
             <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce delay-200"></div>
           </div>
         </div>
-        <h1 className='text-zinc-500 pt-10 font-doto'>made with love by Duggu</h
       </div>
       </div>
     </div>
