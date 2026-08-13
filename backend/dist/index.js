@@ -1,5 +1,6 @@
 import { WebSocketServer, WebSocket } from "ws";
-const wss = new WebSocketServer({ port: 8080 });
+const PORT = process.env.PORT || 8080;
+const wss = new WebSocketServer({ port: Number(PORT) });
 let userCount = 0;
 let rooms = new Map();
 function generateRoomId() {
@@ -9,15 +10,14 @@ function getUsernames(members) {
     return Array.from(members).map(socket => socket.username);
 }
 wss.on("connection", (socket) => {
-    //userCount=userCount+1;
     console.log("User Connected #");
     socket.on("message", (msg) => {
         console.log("Message received from user : " + msg.toString());
         const data = JSON.parse(msg.toString());
         switch (data.type) {
+            // ...create_room
             case "create_room":
                 {
-                    // ...create_room
                     const memberSocket = new Set();
                     memberSocket.add(socket);
                     const roomId = generateRoomId();
@@ -32,9 +32,9 @@ wss.on("connection", (socket) => {
                     console.log(`Room is created by ${data.username} and roomID is : ${roomId}`);
                     break;
                 }
+            // ...join_room
             case "join_room":
                 {
-                    // ...join_room
                     try {
                         const roomid = data.roomId;
                         const memberSocket = rooms.get(roomid);
@@ -73,6 +73,7 @@ wss.on("connection", (socket) => {
                     }
                     break;
                 }
+            // ...chat_message
             case "chat_message":
                 {
                     const members = rooms.get(socket.roomId);

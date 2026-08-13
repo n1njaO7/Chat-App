@@ -7,7 +7,9 @@ declare module "ws"{
     }
 }
 
-const wss = new WebSocketServer({port: 8080});
+const PORT = process.env.PORT || 8080;
+const wss = new WebSocketServer({ port: Number(PORT) });
+
 
 let userCount:number=0;
 
