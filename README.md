@@ -23,18 +23,12 @@ This repository contains a TypeScript chat app that demonstrates real-time messa
 
    npm run build
 
-(If the project uses a different package manager or script names, check package.json and adjust the commands.)
 
 ## What you'll find
 
 - TypeScript source code for client and server
 - CSS for styling
-- Minimal implementation suitable for learning and small projects
 
-## Notes
-
-- Removed large images and screenshots to keep the README focused and lightweight.
-- Check package.json for available scripts and configuration details.
 
 ## Contributing
 
