@@ -1,6 +1,6 @@
 # Chat-App
 
-Simple WebSocket-based real-time chat application.
+WebSocket-based real-time chat application.
 
 This repository contains a TypeScript chat app that demonstrates real-time messaging using WebSockets.
 
