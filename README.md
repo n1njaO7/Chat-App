@@ -50,11 +50,3 @@ Adjust the exact commands to match the scripts in the repository's package.json.
 ## Contributing
 
 Contributions are welcome. Please open an issue to discuss major changes before submitting a pull request.
-
-## License
-
-This project does not yet specify a license. Add a LICENSE file (for example MIT) if you want to make the project open source.
-
----
-
-If you'd like, I can tailor this README with usage screenshots, a more detailed development guide, or add badges and a license file. Tell me what details you'd like included.
